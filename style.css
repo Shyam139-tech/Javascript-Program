@@ -1,0 +1,178 @@
+/* 🌈 Animated background gradient */
+body {
+  height: 100vh;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  background: linear-gradient(-45deg, #ff9a9e, #fad0c4, #a1c4fd, #c2e9fb);
+  background-size: 400% 400%;
+  animation: gradientAnimation 18s ease-in-out infinite;
+  font-family: Arial, sans-serif;
+}
+
+/* ✨ Gradient animation keyframes */
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Page title */
+h1 {
+  text-align: center;
+  color: #333;
+  margin-top: 100px;
+  margin-left: 17.3em;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+}
+
+/* Form container */
+div {
+  background-color: #fff;
+  width: 400px;
+  margin: 20px auto;
+  padding: 25px 30px;
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+}
+
+/* Labels and inputs */
+label {
+  font-weight: bold;
+  display: block;
+  margin-top: 10px;
+  color: #333;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="email"],
+select {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+
+/* Gender radio buttons */
+.gender-group {
+  display: flex;
+  gap: 20px;          /* space between Male & Female */
+  align-items: center;
+  margin-top: 3px;
+  margin-bottom: 4px; /* tighter spacing before Course */
+  background: none;
+  box-shadow: none;
+  padding: 0;
+  border: none;
+}
+
+.gender-group label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 16px;
+  color: #333;
+  cursor: pointer;
+}
+
+.gender-group input[type="radio"] {
+  transform: scale(1.2);
+  cursor: pointer;
+}
+
+/* Submit button */
+button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 15px;
+  width: 100%;
+  font-size: 16px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background-color: #45a049;
+  transform: scale(1.03);
+}
+
+/* Table styling */
+#student {
+  margin-top: 40px;
+}
+
+table {
+  width: 80%;
+  margin: 30px auto;
+  border-collapse: collapse;
+  box-shadow: 0 3px 12px rgba(0,0,0,0.2);
+  font-family: Arial, sans-serif;
+  background-color: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 12px 15px;
+  text-align: center;
+}
+
+th {
+  background-color: #4CAF50;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+tr:hover {
+  background-color: #f1f1f1;
+  transition: 0.3s;
+}
+
+/* Delete button in table */
+.deleteBtn {
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.deleteBtn:hover {
+  background-color: #c0392b;
+}
+
+/* Small responsive adjustment */
+@media (max-width: 500px) {
+  div {
+    width: 90%;
+    padding: 20px;
+  }
+
+  table {
+    width: 95%;
+  }
+}
